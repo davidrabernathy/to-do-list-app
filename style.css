@@ -372,7 +372,7 @@ h1
 }
 
 /* responsive */
-@media (max-width: 480px)
+@media (max-width: 768px)
 {
   body
   {
@@ -391,13 +391,11 @@ h1
 
   .container
   {
-    padding: 30px 20px;
+    padding: 30px 15px !important;
     margin: 0 auto;
     position: relative;
     max-width: 100%;
-    width: calc(100% - 20px); /* accounts for body padding */
     box-sizing: border-box;
-    overflow: hidden; /* prevent content from overflowing */
   }
 
   h1
@@ -408,23 +406,35 @@ h1
 
   .todo-add
   {
-    flex-direction: column;
-    gap: 10px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-bottom: 20px;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  #todoInput, #categorySelect, #addButton
+  {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    flex: none !important;
   }
 
   #todoInput
   {
-    width: 100%;
+    padding: 12px 16px;
   }
 
   #categorySelect
   {
-    width: 100%;
+    padding: 12px 16px;
   }
 
   #addButton
   {
-    width: 100%;
     padding: 14px 24px;
   }
 
@@ -432,11 +442,12 @@ h1
   .filters
   {
     gap: 6px;
+    margin-bottom: 15px;
   }
 
   .filter-button
   {
-    padding: 6px 12px;
+    padding: 8px 14px;
     font-size: 0.85em;
   }
 
@@ -444,7 +455,7 @@ h1
   .todo-item
   {
     flex-wrap: wrap;
-    padding: 10px 12px;
+    padding: 10px 12px:;
   }
 
   .todo-text
