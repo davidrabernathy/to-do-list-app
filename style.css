@@ -196,7 +196,7 @@ h1
 .filter-button[data-filter="all"].active
 {
   background: #737370;
-  color: #737370;
+  color: white;
   border-color: #737370;
 }
 
