@@ -379,13 +379,25 @@ h1
     padding: 10px;
     align-items: flex-start;
     padding-top: 20px;
+    overflow-y: auto;
+    min-height: 100vh;
+  }
+
+  body::before
+  {
+    /* reduce blur filter size on mobile */
+    inset: -50px;
   }
 
   .container
   {
     padding: 30px 20px;
-    margin: 0;
-    min-height: auto;
+    margin: 0 auto;
+    position: relative;
+    max-width: 100%;
+    width: calc(100% - 20px); /* accounts for body padding */
+    box-sizing: border-box;
+    overflow: hidden; /* prevent content from overflowing */
   }
 
   h1
