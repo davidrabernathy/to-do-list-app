@@ -1,6 +1,8 @@
 # A To-Do List Application
 
-- A aimple and clean to-do list application with categories and local storage
+- A simple and clean to-do list application with categories and local storage
+
+- Live Demo here: https://davidrabernathy.github.io/to-do-list-app/
 
 ## Features
 
