@@ -371,7 +371,7 @@ h1
   margin-bottom: 8px;
 }
 
-/* responsive */
+/* Tablet and Mobile */
 @media (max-width: 768px)
 {
   body
@@ -385,42 +385,44 @@ h1
 
   body::before
   {
-    /* reduce blur filter size on mobile */
     inset: -50px;
   }
 
   .container
   {
-    padding: 30px 15px !important;
+    padding: 25px 15px;
     margin: 0 auto;
     position: relative;
     max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
   }
 
   h1
   {
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-bottom: 20px;
   }
 
+  /* Override the flex layout for mobile */
   .todo-add
   {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 10px !important;
-    margin-bottom: 20px;
-    width: 100% !important;
+    display: block !important; /* Changed from flex to block */
+    width: 100%;
     box-sizing: border-box;
+    margin-bottom: 20px;
   }
 
-  #todoInput, #categorySelect, #addButton
+  #todoInput,
+  #categorySelect,
+  #addButton
   {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    margin: 0 !important;
-    flex: none !important;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
+    flex: none;
   }
 
   #todoInput
@@ -430,15 +432,15 @@ h1
 
   #categorySelect
   {
-    padding: 12px 16px;
+    padding: 12px;
   }
 
   #addButton
   {
     padding: 14px 24px;
+    margin-bottom: 0; /* Remove margin from last element */
   }
 
-  /* filter buttons wrap better on mobile */
   .filters
   {
     gap: 6px;
@@ -451,11 +453,15 @@ h1
     font-size: 0.85em;
   }
 
-  /* adjust to-to items for mobile */
+  #todoList
+  {
+    margin-bottom: 20px;
+  }
+
   .todo-item
   {
     flex-wrap: wrap;
-    padding: 10px 12px:;
+    padding: 10px 12px;
   }
 
   .todo-text
@@ -476,11 +482,75 @@ h1
     padding: 6px 12px;
   }
 
-
-  /* stats section */
   .stats
   {
     font-size: 0.9em;
     padding-top: 15px;
+  }
+
+  .empty-state
+  {
+    padding: 30px 20px;
+  }
+}
+
+/* Phone specific */
+@media (max-width: 480px)
+{
+  body
+  {
+    padding: 8px;
+  }
+
+  .container
+  {
+    padding: 20px 12px;
+  }
+
+  h1
+  {
+    font-size: 1.6em;
+  }
+
+  .filter-button
+  {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+
+  #todoInput,
+  #categorySelect
+  {
+    padding: 10px 14px;
+  }
+
+  #addButton
+  {
+    padding: 12px 20px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px)
+{
+  body
+  {
+    padding: 5px;
+  }
+
+  .container
+  {
+    padding: 18px 10px;
+  }
+
+  h1
+  {
+    font-size: 1.4em;
+  }
+
+  .filter-button
+  {
+    padding: 5px 10px;
+    font-size: 0.75em;
   }
 }
